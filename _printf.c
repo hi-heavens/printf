@@ -23,4 +23,10 @@ int _printf(const char *format, ...)
 		return (-1);
 
 	va_start(arg, format);
+
+	char_count = format_count(format, format_list, arg);
+
+	va_end(arg);
+
+	return (char_count);
 }

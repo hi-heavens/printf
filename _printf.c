@@ -9,11 +9,11 @@
 */
 int _printf(const char *format, ...)
 {
-	int printed_chars;
+	int char_count;
 	print_t format_list[] = {
-		{"c", print_char},
-		{"s", print_string},
-		{"%", print_percent},
+		{"c", _print_char},
+		{"s", _print_string},
+		{"%", _print_percent},
 		{NULL, NULL}
 	};
 

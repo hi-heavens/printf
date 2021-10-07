@@ -18,7 +18,7 @@ typedef struct print
 typedef struct print print_t;
 
 int _putchar(char c);
-int _write_char(char);
+int _write(char);
 int _printf(const char *format, ...);
 
 #endif  /* _MAIN_H */

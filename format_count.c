@@ -8,5 +8,23 @@
  * *@arg: the function accepts an input saved into arg
  * Return: Total count of the printed character
  */
-int format_count(const char *format, print_t format_list, va_list arg)
+int format_count(const char *format, print_t format_list[], va_list arg)
 {
+        int i;
+        int j;
+        int count = 0;
+
+        for (i = 0; format[i] != '\0'; i++)
+        {
+                if (format[i] == '%')
+                {
+
+                }
+                else
+                {
+                        _write(format[i]);
+                        count++;
+                }
+        }
+        return (count);
+}

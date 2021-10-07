@@ -9,7 +9,7 @@
 */
 int _printf(const char *format, ...)
 {
-        int printed_chars;
+	int printed_chars;
 	print_t format_list[] = {
 		{"c", print_char},
 		{"s", print_string},
@@ -17,11 +17,10 @@ int _printf(const char *format, ...)
 		{NULL, NULL}
 	};
 
-        va_list arg;
+	va_list arg;
 
-        if (format == NULL)
-                return (-1);
+	if (format == NULL)
+		return (-1);
 
-        va_start(arg, format);
-
+	va_start(arg, format);
 }

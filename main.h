@@ -9,14 +9,14 @@
  * @t: type to print
  * @f: function to print type
  */
-struct print
+struct convert
 {
-  char *t;
+  char *sym;
   int (*f)(va_list);
 };
+typedef struct convert conver_t;
 
-typedef struct print print_t;
-
+int _printf(const char *format, ...);
 int _putchar(char c);
 int _write(char);
 int _printf(const char *format, ...);

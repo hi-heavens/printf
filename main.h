@@ -1,6 +1,8 @@
-#ifndef _MAIN_H_
-#define _MAIN_H_
+#ifndef PRINT_F_ALX
+#define PRINT_F_ALX
 
+#include <limits.h>
+#include <unistd.h>
 #include <stdio.h>
 #include <stdarg.h>
 #include <stdlib.h>
@@ -39,4 +41,4 @@ void write_base(char *str);
 char *_memcpy(char *dest, char *src, unsigned int n);
 int print_unsgined_number(unsigned int);
 
-#endif  /* _MAIN_H */
+#endif /** PRINT_F_ALX **/

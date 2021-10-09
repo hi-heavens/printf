@@ -1,32 +1,29 @@
-#include <stdarg.h>
 #include "main.h"
 /**
-* _printf - Entry point
-* Description - A function that produces output
-* *@format: the function accepts an input saved into
-* format (Character string)
-* Return: Total count of the printed character
-*/
+ * _printf - Entry point
+ * Description - A function that produces output
+ * *@format: the function accepts an input saved into
+ * format (Character string)
+ * Return: Total count of the printed character
+ */
 int _printf(const char *format, ...)
 {
-	int char_count;
-	print_t format_list[] = {
-		{"c", _print_char},
-		{"s", _print_string},
-		{"%", _print_percent},
-		{NULL, NULL}
-	};
-
-	va_list arg;
-
-	if (format == NULL)
-		return (-1);
-
-	va_start(arg, format);
-
-	char_count = format_count(format, format_list, arg);
-
-	va_end(arg);
-
-	return (char_count);
+int printed_chars;
+conver_t f_list[] = {
+{"c", print_char},
+{"s", print_string},
+{"%", print_percent},
+{"d", print_integer},
+{"i", print_integer},
+{"b", print_binary},
+{NULL, NULL}
+};
+va_list arg_list;
+if (format == NULL)
+return (-1);
+va_start(arg_list, format);
+/*calling parser function*/
+printed_chars = parser(format, f_list, arg_list);
+va_end(arg_list);
+return (printed_chars);
 }

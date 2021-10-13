@@ -7,14 +7,15 @@
 #include <stdarg.h>
 #include <stdlib.h>
 /**
- * struct print - structure for printing various types
- * @t: type to print
+ * struct convert - Main entry
+ * Description - structure for printing various types
+ * @sym: type to print
  * @f: function to print type
  */
 struct convert
 {
-  char *sym;
-  int (*f)(va_list);
+	char *sym;
+	int (*f)(va_list);
 };
 typedef struct convert conver_t;
 
